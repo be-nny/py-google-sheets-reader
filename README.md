@@ -1,6 +1,6 @@
 # py-google-sheets-reader
 Ensure google OAuth2.0 is set up correctly
-Download the google OAuth2.0 Credentials and specify the folder when prometed
+Download the google OAuth2.0 Credentials and specify the folder when prompted
 
 Provide the ID for the Google sheets doc
 and the sheet number (indexing starts at 0).
