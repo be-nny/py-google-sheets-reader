@@ -26,8 +26,15 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
 COOL_DOWNS = [5, 10, 20, 40, 60]
 CURRENT_COOL_DOWN_INDEX = 0
 
-def getAuth():
-    token_file = input("Google Credentials File Path >>")
+def getAuth(token_file):
+    """
+    Creating the Credentials data
+
+    :type token_file: str
+
+    :parameter token_file: file path for json token data
+    :return: json object
+    """
     try:
         token_json_path = token_file + "token.json"
         credentials_json_path = token_file + "credentials.json"
@@ -63,7 +70,7 @@ def getData(sheet_id, selected_range, creds, sheet_num):
     :parameter creds: json creds: credentials generated from the OAuth screen
     :parameter sheet_num: the index of the sheet to be read
     :return: array containing the values for each cell
-    :raises: HttpError dealt with by throttling back on requests
+    :raises HttpError: dealt with by throttling back on requests
     """
 
     try:
