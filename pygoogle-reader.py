@@ -53,12 +53,15 @@ def getAuth():
 def getData(sheet_id, selected_range, creds, sheet_num):
     """
     Method for getting data from selected google sheet with selected range
+    :type sheet_id: str
+    :type selected_range: str
+    :type creds: str
+    :type sheet_num: int
 
-    :param: int sheet_id: the id of the sheet to be read
-    :param: str selected_range: the range of cells to be read
-    :param: json creds: credentials generated from the OAuth screen
-    :param: int sheet_num: the index of the sheet to be read
-    :rtype: array
+    :parameter sheet_id: the id of the sheet to be read
+    :parameter selected_range: the range of cells to be read
+    :parameter creds: json creds: credentials generated from the OAuth screen
+    :parameter sheet_num: the index of the sheet to be read
     :return: array containing the values for each cell
     :raises: HttpError dealt with by throttling back on requests
     """
